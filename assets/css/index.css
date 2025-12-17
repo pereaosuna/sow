@@ -31,3 +31,50 @@ nav ul li a:focus {
 	color: #007acc;
 	outline: none;
 }
+
+/*animated cover*/
+
+.cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #222;
+	color: #fff;
+}
+.title {
+	font-size: 3rem;
+	text-transform: uppercase;
+	opacity: 0;
+	animation: fadeIn 2s forwards ease-in;
+}
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+/*section analysis*/
+
+.analysis-text {
+	columns: 1;
+	column-gap: 2rem;
+}
+@media (min-width: 800px) {
+	.analysis-text {
+		columns: 2;
+	}
+}
+
+/*screenshots*/
+
+.screenshots {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+}
+.screenshots img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #ccc;
+}
